@@ -1,7 +1,7 @@
 package kunion
 
 /**
- * A union between [T1] and [T2].
+ * A discriminated union between [T1] and [T2].
  */
 sealed class Union<T1, T2> {
     class T1<T1, T2>(val value: T1) : Union<T1, T2>() {
