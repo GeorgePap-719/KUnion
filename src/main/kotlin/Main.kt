@@ -11,6 +11,11 @@ fun main() {
     }
     println(finalVal)
 
+    val triple = TripleUnion.T3<String, Int, Int>(11)
+    triple.getT3OrElse {
+
+    }
+
 }
 
 fun returnUnion(): Union<String, Int> {
