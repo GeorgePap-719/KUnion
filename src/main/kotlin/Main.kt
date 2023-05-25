@@ -1,17 +1,26 @@
 package kunion
 
 fun main() {
-    println(returnUnion())
-    when(patternMatching()) {
-        is Union.T1 -> TODO()
-        is Union.T2 -> TODO()
+    val union = returnUnion()
+    val value = union.getT1OrElse {
+        10
     }
+    val resultValue = runCatching { throwErrrorE() }
+    val finalVal = resultValue.getOrElse {
+        10
+    }
+    println(finalVal)
+
 }
 
 fun returnUnion(): Union<String, Int> {
-    return Union.t1("hi world")
+    return Union.T1("hi world")
 }
 
 fun patternMatching(): Union<String, Int> {
-    return Union.t2(10)
+    return Union.T2(10)
+}
+
+fun throwErrrorE(): String {
+    error("throws afterAll")
 }
