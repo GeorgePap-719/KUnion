@@ -12,10 +12,8 @@ fun main() {
     println(finalVal)
 
     val triple = TripleUnion.T3<String, Int, Int>(11)
-    triple.getT3OrElse {
-
-    }
-
+    val map = triple.mapT3 { Test("hi") }
+    println(map)
 }
 
 fun returnUnion(): Union<String, Int> {
@@ -29,3 +27,5 @@ fun patternMatching(): Union<String, Int> {
 fun throwErrrorE(): String {
     error("throws afterAll")
 }
+
+data class Test(val value: String)
