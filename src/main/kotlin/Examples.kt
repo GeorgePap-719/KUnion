@@ -31,7 +31,7 @@ fun getResultUnion(): ResultOrErrorUnion {
 
 fun errorHandlingWithUnions() {
     when (val result = getResultUnion()) {
-        is Union.T1 -> TODO("process(result.value)")
+        is Union.T1 ->TODO("process(result.value.value /* needs one extra step to get `value` */)")
         is Union.T2 -> TODO("showError(result.message)")
     }
 }
