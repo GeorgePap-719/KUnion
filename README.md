@@ -55,9 +55,9 @@ to the solution, compared to a simple sealed class hierarchy.
 
 When writing application code, more often than not, business scenarios are complex and large enough. To represent their
 states or their results, we need many (and maybe big) sealed classes. This type is created with the goal to reduce some
-clutter from many simple and small sealed classes, almost duplicated code (sealed classes which are practically the same
-but cannot be used on for different contexts), and in some rare (or not so rare) cases to help unify different sealed
-classes with a simple and clean API.
+clutter from many internal simple and small sealed classes, almost duplicated code (sealed classes which are practically
+the same but cannot be used on for different contexts), and in some rare (or not so rare) cases to help unify different
+sealed classes with a simple and clean API. While being acceptable to take a hit on readability.
 
 ## Usage
 
