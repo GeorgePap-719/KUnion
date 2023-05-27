@@ -53,11 +53,12 @@ to the solution, compared to a simple sealed class hierarchy.
 
 ## Motivation
 
-When writing application code, more often than not, business scenarios are complex and large enough. To represent their
-states or their results, we need many (and maybe big) sealed classes. This type is created with the goals to reduce some
-clutter from many internal, simple and small sealed classes. Reduce almost duplicated code (sealed classes which are practically
-the same but cannot be used on for different contexts), and in some rare (or not so rare) cases to help unify different
-sealed classes with a simple and clean API. While being acceptable to take a hit on readability.
+In application code development, business scenarios frequently involve complex and extensive requirements. This often
+leads to the creation of numerous sealed classes to represent various states or outcomes. However, managing a large
+number of these classes can result in code duplication, especially when similar sealed classes are needed for different
+contexts. In some cases, it becomes necessary to unify multiple sealed classes under a single sealed class type. The
+primary goals of this project are to minimize clutter, eliminate code duplication, and provide a cohesive API for
+managing diverse sealed classes within the given contexts, even at the cost of reduced readability.
 
 ## Usage
 
@@ -102,4 +103,4 @@ can save up some time from authoring some "weird" sealed class hierarchy. Don't 
 - As a return type for a **public** API. This is because, a simple sealed class is always more readable from `Union`
   type. Also, it forces the consumer to "acknowledge" the `Union` API without any direct benefit.
 - Do not depend on `Union` API just for the convenient/ready-to-use extensions. It is pretty easy to write appropriate
-  extensions for a targeted sealed class, and probably most cases will not use more than one extension. 
+  extensions for a targeted sealed class, and probably most cases will not use more than one extension.
